@@ -18,6 +18,28 @@ function interactive() {
 	pacman -Sl | fzf --multi --preview="pacman -Si {1}/{2}" --preview-window=top,45% --bind 'enter:execute(doas pacman -S {1}/{2})' --margin 5% --info=inline
 }
 
+help() {
+  cat << EOF
+Usage: pac [OPTION] [ARGS]
+A lil pacman wrapper.
+
+  i [PKGS]        install packages
+	ii              install packages interactively
+  r [PKGS]        remove packages
+  u               update repositories & upgrade packages
+  s [ARG]         search for packages
+  l               list installed packages
+  info [PKG]      show information about a package
+  files [PKG]     list files owned by the queried package
+  clean           clean pacman cache
+  cache-size      show pacman cache size
+  autoremove      remove orphaned packages
+  count           show number of installed packages
+
+EOF
+}
+
+
 ## main ###############################################
 
 case $1 in
@@ -46,7 +68,7 @@ case $1 in
 	"count")
 		pacman -Q | wc -l ;;
 	"")
-		pacman -V ;;
+		help ;;
 	*)
 		echo "bruh.exe stopped working"
 		;;
