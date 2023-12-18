@@ -7,6 +7,8 @@ case $1 in
 		pacman -Rns ${@:2} ;;
 	"s")
 		pacman -Ss ${@:2} ;;
+	"u")
+		pacman -Syu ;;
 	"info")
 		pacman -Si ${@:2} ;;
 	"files")
