@@ -5,6 +5,8 @@ case $1 in
 		pacman -S ${@:2} ;;
 	"r")
 		pacman -Rns ${@:2} ;;
+	"autoremove")
+		pacman -Rns `pacman -Qdttq` ;;
 	"s")
 		pacman -Ss ${@:2} ;;
 	"u")
