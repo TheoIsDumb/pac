@@ -67,7 +67,7 @@ case $1 in
 		pacman -Q ;;
 	"count")
 		pacman -Q | wc -l ;;
-	"")
+	"" | "h")
 		help ;;
 	*)
 		echo "bruh.exe stopped working"
