@@ -9,6 +9,8 @@ case $1 in
 		pacman -Ss ${@:2} ;;
 	"info")
 		pacman -Si ${@:2} ;;
+	"files")
+		pacman -Fl ${@:2} ;;
 	"l")
 		pacman -Q ;;
 	"count")
