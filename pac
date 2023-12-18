@@ -1,8 +1,24 @@
 #!/bin/bash
 
+function depcheck() {
+	if [[ -z $(command -v fzf) ]]; then
+		printf "fzf not found. Please install it.\n" >&2
+		exit 2
+	fi
+}
+
+
+function interactive() {
+	depcheck
+
+	pacman -Sl | fzf --multi --preview="pacman -Si {1}/{2}" --preview-window=top,45% --bind 'enter:execute(doas pacman -S {1}/{2})' --margin 5% --info=inline
+}
+
 case $1 in
 	"i")
 		pacman -S ${@:2} ;;
+	"ii")
+		interactive ;;
 	"r")
 		pacman -Rns ${@:2} ;;
 	"autoremove")
