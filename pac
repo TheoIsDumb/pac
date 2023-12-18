@@ -13,6 +13,8 @@ case $1 in
 		pacman -Fl ${@:2} ;;
 	"clean")
 		pacman -Scc ;;
+	"cache-size")
+		du -sh /var/cache/pacman/pkg | awk '{print $1}' ;;
 	"l")
 		pacman -Q ;;
 	"count")
