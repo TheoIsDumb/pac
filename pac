@@ -5,6 +5,8 @@ case $1 in
 		pacman -S ${@:2} ;;
 	"r")
 		pacman -Rs ${@:2} ;;
+	"info")
+		pacman -Si ${@:2} ;;
 	"")
 		pacman -V ;;
 	*)
