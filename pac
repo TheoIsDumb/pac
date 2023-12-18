@@ -11,6 +11,8 @@ case $1 in
 		pacman -Si ${@:2} ;;
 	"files")
 		pacman -Fl ${@:2} ;;
+	"clean")
+		pacman -Scc ;;
 	"l")
 		pacman -Q ;;
 	"count")
