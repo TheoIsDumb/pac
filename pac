@@ -1,5 +1,10 @@
 #!/bin/bash
 
+## pac.
+## yet another pacman wrapper made by theo for himself.
+
+## functions ##########################################
+
 function depcheck() {
 	if [[ -z $(command -v fzf) ]]; then
 		printf "fzf not found. Please install it.\n" >&2
@@ -7,12 +12,13 @@ function depcheck() {
 	fi
 }
 
-
 function interactive() {
 	depcheck
 
 	pacman -Sl | fzf --multi --preview="pacman -Si {1}/{2}" --preview-window=top,45% --bind 'enter:execute(doas pacman -S {1}/{2})' --margin 5% --info=inline
 }
+
+## main ###############################################
 
 case $1 in
 	"i")
