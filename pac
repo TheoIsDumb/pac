@@ -3,6 +3,11 @@
 ## pac.
 ## yet another pacman wrapper made by theo for himself.
 
+## variables ##########################################
+
+power="doas"
+fzf_flags="--multi --preview-window=top,45% --margin 5% --info=inline"
+
 ## functions ##########################################
 
 function depcheck() {
@@ -15,7 +20,8 @@ function depcheck() {
 function interactive() {
 	depcheck
 
-	pacman -Sl | fzf --multi --preview="pacman -Si {1}/{2}" --preview-window=top,45% --bind 'enter:execute(doas pacman -S {1}/{2})' --margin 5% --info=inline
+	pacman -Sl | fzf --preview="pacman -Si {1}/{2}" \
+		--bind "enter:execute($power pacman -S {1}/{2})"  $fzf_flags
 }
 
 help() {
@@ -38,7 +44,6 @@ A lil pacman wrapper.
 
 EOF
 }
-
 
 ## main ###############################################
 
