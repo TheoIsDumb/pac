@@ -7,6 +7,8 @@ case $1 in
 		pacman -Rs ${@:2} ;;
 	"info")
 		pacman -Si ${@:2} ;;
+	"l")
+		pacman -Q ;;
 	"count")
 		pacman -Q | wc -l ;;
 	"")
