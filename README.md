@@ -11,7 +11,7 @@ OR
 
 `doas ./install.sh`
 
-### usage
+## usage
 
 ```
 Usage: pac [OPTION] [ARGS]
@@ -31,10 +31,10 @@ A lil pacman wrapper.
   count           show number of installed packages
 ```
 
-# completion
+### completion
 
-if for some reason the pac-completion.bash doesn't work, do this:
+if for some reason `pac-completion.bash` doesn't work, do this:
 
 `echo 'complete -W "i interactive r s autoremove u info files clean cache-size l count h" pac' >> ~/.bashrc`
 
-or ~/.zshrc
+or `~/.zshrc`
