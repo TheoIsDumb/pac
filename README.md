@@ -1,5 +1,11 @@
 # pac
 
+
+
+https://github.com/TheoIsDumb/pac/assets/118801625/1b26bbc7-3b22-4c26-9228-1a70b46edb3a
+
+
+
 a lil pacman wrapper made by me for myself.  
 (should've made it a loooooooooooooong time ago)
 
