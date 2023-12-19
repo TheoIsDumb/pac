@@ -31,7 +31,7 @@ A lil pacman wrapper.
   count           show number of installed packages
 ```
 
-### completion
+## completion
 
 if for some reason `pac-completion.bash` doesn't work, do this:
 
