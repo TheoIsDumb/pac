@@ -1,0 +1,40 @@
+# pac
+
+a lil pacman wrapper made by me for myself.  
+(should've made it a loooooooooooooong time ago)
+
+## installation
+
+`sudo ./install.sh`
+
+OR
+
+`doas ./install.sh`
+
+### usage
+
+```
+Usage: pac [OPTION] [ARGS]
+A lil pacman wrapper.
+
+  i [PKGS]        install packages
+  ii              install packages interactively
+  r [PKGS]        remove packages
+  u               update repositories & upgrade packages
+  s [ARG]         search for packages
+  l               list installed packages
+  info [PKG]      show information about a package
+  files [PKG]     list files owned by the queried package
+  clean           clean pacman cache
+  cache-size      show pacman cache size
+  autoremove      remove orphaned packages
+  count           show number of installed packages
+```
+
+# completion
+
+if for some reason the pac-completion.bash doesn't work, do this:
+
+`echo 'complete -W "i ii r s autoremove u info files clean cache-size l count h" pac' >> ~/.bashrc`
+
+or ~/.zshrc

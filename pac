@@ -26,6 +26,7 @@ function interactive() {
 
 function help() {
   cat << EOF
+
 Usage: pac [OPTION] [ARGS]
 A lil pacman wrapper.
 
