@@ -18,7 +18,7 @@ Usage: pac [OPTION] [ARGS]
 A lil pacman wrapper.
 
   i [PKGS]        install packages
-  ii              install packages interactively
+  interactive     install packages interactively
   r [PKGS]        remove packages
   u               update repositories & upgrade packages
   s [ARG]         search for packages
@@ -35,6 +35,6 @@ A lil pacman wrapper.
 
 if for some reason the pac-completion.bash doesn't work, do this:
 
-`echo 'complete -W "i ii r s autoremove u info files clean cache-size l count h" pac' >> ~/.bashrc`
+`echo 'complete -W "i interactive r s autoremove u info files clean cache-size l count h" pac' >> ~/.bashrc`
 
 or ~/.zshrc

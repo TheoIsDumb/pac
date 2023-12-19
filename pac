@@ -31,7 +31,7 @@ Usage: pac [OPTION] [ARGS]
 A lil pacman wrapper.
 
   i [PKGS]        install packages
-  ii              install packages interactively
+  interactive     install packages interactively
   r [PKGS]        remove packages
   u               update repositories & upgrade packages
   s [ARG]         search for packages
@@ -51,7 +51,7 @@ EOF
 case $1 in
 	"i")
 		pacman -S ${@:2} ;;
-	"ii")
+	"interactive")
 		interactive ;;
 	"r")
 		pacman -Rns ${@:2} ;;
