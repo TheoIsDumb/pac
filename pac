@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## pac.
-## yet another pacman wrapper made by theo for himself.
+## yet another pacman wrapper made by me for myself.
 
 ## variables ##########################################
 
@@ -24,13 +24,13 @@ function interactive() {
 		--bind "enter:execute($power pacman -S {1}/{2})"  $fzf_flags
 }
 
-help() {
+function help() {
   cat << EOF
 Usage: pac [OPTION] [ARGS]
 A lil pacman wrapper.
 
   i [PKGS]        install packages
-	ii              install packages interactively
+  ii              install packages interactively
   r [PKGS]        remove packages
   u               update repositories & upgrade packages
   s [ARG]         search for packages
