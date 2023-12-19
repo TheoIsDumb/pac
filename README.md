@@ -11,6 +11,12 @@ OR
 
 `doas ./install.sh`
 
+## prerequisites
+
+- pacman (duh)
+- bash
+- fzf (optional) [for interactive install]
+
 ## usage
 
 ```
