@@ -51,23 +51,23 @@ EOF
 
 case $1 in
 	"i")
-		pacman -S ${@:2} ;;
+		$power pacman -S ${@:2} ;;
 	"interactive")
 		interactive ;;
 	"r")
-		pacman -Rns ${@:2} ;;
+		$power pacman -Rns ${@:2} ;;
 	"autoremove")
-		pacman -Rns `pacman -Qdttq` ;;
+		$power pacman -Rns `pacman -Qdttq` ;;
 	"s")
 		pacman -Ss ${@:2} ;;
 	"u")
-		pacman -Syu ${@:2} ;;
+		$power pacman -Syu ${@:2} ;;
 	"info")
 		pacman -Si ${@:2} ;;
 	"files")
 		pacman -Fl ${@:2} ;;
 	"clean")
-		pacman -Scc ;;
+		$power pacman -Scc ;;
 	"cache-size")
 		du -sh /var/cache/pacman/pkg | awk '{print $1}' ;;
 	"l")
