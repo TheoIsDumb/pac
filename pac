@@ -60,7 +60,7 @@ case $1 in
 	"s")
 		pacman -Ss ${@:2} ;;
 	"u")
-		pacman -Syu ;;
+		pacman -Syu ${@:2} ;;
 	"info")
 		pacman -Si ${@:2} ;;
 	"files")
