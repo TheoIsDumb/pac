@@ -23,6 +23,8 @@ OR
 - bash
 - fzf (optional) [for interactive install]
 
+NB: `doas` is used to execute pacman as root by default. Change `power` variable in the pac script to `sudo` if you use `sudo`.
+
 ## usage
 
 ```
