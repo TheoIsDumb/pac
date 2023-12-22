@@ -34,7 +34,8 @@ A lil pacman wrapper.
   i [PKGS]        install packages
   interactive     install packages interactively
   r [PKGS]        remove packages
-  u               update repositories & upgrade packages
+  u               update repositories & upgrade packages;
+                  can mention package to install alongside upgrade
   s [ARG]         search for packages
   l               list installed packages
   info [PKG]      show information about a package
