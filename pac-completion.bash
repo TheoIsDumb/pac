@@ -1,3 +1,3 @@
 #!/bin/bash
 
-complete -W "i interactive r s autoremove u info files clean cache-size l count h" pac
+complete -W "i interactive r orphan s autoremove u info files clean cache-size l count h help" pac

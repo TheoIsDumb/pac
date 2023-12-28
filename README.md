@@ -51,6 +51,6 @@ A lil pacman wrapper.
 
 if for some reason `pac-completion.bash` doesn't work, do this:
 
-`echo 'complete -W "i interactive r s autoremove u info files clean cache-size l count h" pac' >> ~/.bashrc`
+`echo 'complete -W "i interactive r orphan s autoremove u info files clean cache-size l count h help" pac' >> ~/.bashrc`
 
 or `~/.zshrc`
