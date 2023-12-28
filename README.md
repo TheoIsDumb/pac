@@ -42,6 +42,7 @@ A lil pacman wrapper.
   files [PKG]     list files owned by the queried package
   clean           clean pacman cache
   cache-size      show pacman cache size
+  orphan          list orphaned packages
   autoremove      remove orphaned packages
   count           show number of installed packages
 ```

@@ -41,6 +41,7 @@ A lil pacman wrapper.
   files [PKG]     list files owned by the queried package
   clean           clean pacman cache
   cache-size      show pacman cache size
+  orphan          list orphaned packages
   autoremove      remove orphaned packages
   count           show number of installed packages
 
@@ -56,6 +57,8 @@ case $1 in
 		interactive ;;
 	"r")
 		$power pacman -Rns ${@:2} ;;
+	"orphan")
+		pacman -Qdttq ;;
 	"autoremove")
 		$power pacman -Rns `pacman -Qdttq` ;;
 	"s")
