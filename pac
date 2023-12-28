@@ -70,7 +70,7 @@ case $1 in
 	"files")
 		pacman -Fl ${@:2} ;;
 	"clean")
-		$power pacman -Scc ;;
+		$power pacman -Scc --noconfirm ;;
 	"cache-size")
 		du -sh /var/cache/pacman/pkg | awk '{print $1}' ;;
 	"l")
