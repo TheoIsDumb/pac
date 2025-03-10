@@ -21,7 +21,9 @@ function interactive() {
 	depcheck
 
 	pacman -Sl | fzf --preview="pacman -Si {1}/{2}" \
-		--bind "enter:execute($power pacman -S {1}/{2})"  $fzf_flags
+		--bind "enter:execute($power pacman -S {1}/{2})" \
+		--bind "ctrl-r:execute($power pacman -Rns {1}/{2})" \
+			$fzf_flags
 }
 
 function help() {
